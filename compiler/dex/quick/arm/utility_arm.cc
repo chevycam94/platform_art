@@ -24,6 +24,10 @@
 #include "dex/reg_storage_eq.h"
 #include "driver/compiler_driver.h"
 
+#ifndef FALLTHROUGH_INTENDED
+#define FALLTHROUGH_INTENDED do {} while (0)
+#endif
+
 namespace art {
 
 /* This file contains codegen for the Thumb ISA. */
